@@ -18,7 +18,8 @@ class VRScene extends React.Component {
         <a-light type= "point" position="0 5 5"/>
         <a-plane position="0 0 -4" rotation="-90 0 0" width="400" height="400" color="#7BC8A4"></a-plane>
         <a-sky color="#ECECEC"></a-sky>
-
+        <a-entity vive-controls="hand: left"></a-entity>
+        <a-entity vive-controls="hand: right"></a-entity>
         <a-entity obj-model="obj: #forklift-obj; mtl: #forklift-mtl" scale=".005 .005 .005" position="20 5 -30"></a-entity>
       </a-scene>
     );
