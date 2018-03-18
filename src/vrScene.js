@@ -13,8 +13,8 @@ class VRScene extends React.Component {
       <a-scene stats vr-mode-ui="enabled: false">
         <a-entity id="cameraRig">
           <a-entity id="head" camera wasd-controls look-controls></a-entity>
-          <a-entity id="left-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
-          <a-entity id="right-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+          <a-entity id="left-hand" windows-motion-controls="hand: left" vive-controls="hand: left" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; collisionEntities: .environmentGround"></a-entity>
+          <a-entity id="right-hand" windows-motion-controls="hand: left" vive-controls="hand: right" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; collisionEntities: .environmentGround"></a-entity>
         </a-entity>
         <a-entity environment="preset: forest"></a-entity>
         <a-assets>
